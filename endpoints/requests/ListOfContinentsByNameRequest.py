@@ -1,19 +1,22 @@
 from pytest_soap_api_testing.endpoints.baseRequest import baseRequest
-from pytest_soap_api_testing.endpoints.responses.ListOfContinentsByNameResponse import ListOfContinentsByNameResponse
+from pytest_soap_api_testing.endpoints.responses.ListOfContinentsByNameResponse import (
+    ListOfContinentsByNameResponse,
+)
 import requests
+
 
 class ListOfContinentsByNameRequest(baseRequest):
     def __init__(
-            self, 
-            url='http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso', 
-            headers={"Content-Type": "text/xml; charset=utf-8"}, 
-            body=None
-        ):
+        self,
+        url="http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+        headers={"Content-Type": "text/xml; charset=utf-8"},
+        body=None,
+    ):
         super().__init__(url, headers, body)
-        self.body = '''<ListOfContinentsByName xmlns="http://www.oorsprong.org/websamples.countryinfo">
-            </ListOfContinentsByName>'''
+        self.body = """<ListOfContinentsByName xmlns="http://www.oorsprong.org/websamples.countryinfo">
+            </ListOfContinentsByName>"""
         self.buildBody()
-    
+
     def buildBody(self):
         return super().buildBody(self.body)
 
