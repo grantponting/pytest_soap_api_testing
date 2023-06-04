@@ -8,4 +8,5 @@ import pytest
 def test_currency_name():
     response = CurrencyNameRequest("USD").sendRequest()
 
+    assert response.verifyByDTD()
     assert response.getResponseString().text == "Dollars"
