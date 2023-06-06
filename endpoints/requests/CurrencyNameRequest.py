@@ -19,11 +19,11 @@ class CurrencyNameRequest(BaseRequest):
             </CurrencyName>""".format(
             code=currencyCode
         )
-        self.buildBody()
+        self.build_body()
 
-    def buildBody(self):
-        return super().buildBody(self.body)
+    def build_body(self):
+        return super().build_body(self.body)
 
-    def sendRequest(self) -> CurrencyNameResponse:
+    def send_request(self) -> CurrencyNameResponse:
         response = requests.post(self.url, headers=self.headers, data=self.body)
         return CurrencyNameResponse(response)

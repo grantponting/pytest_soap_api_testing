@@ -15,11 +15,11 @@ class ListOfContinentsByCodeRequest(BaseRequest):
         super().__init__(url, headers, body)
         self.body = """<ListOfContinentsByCode xmlns="http://www.oorsprong.org/websamples.countryinfo">
             </ListOfContinentsByCode>"""
-        self.buildBody()
+        self.build_body()
 
-    def buildBody(self):
-        return super().buildBody(self.body)
+    def build_body(self):
+        return super().build_body(self.body)
 
-    def sendRequest(self) -> ListOfContinentsByCodeResponse:
+    def send_request(self) -> ListOfContinentsByCodeResponse:
         response = requests.post(self.url, headers=self.headers, data=self.body)
         return ListOfContinentsByCodeResponse(response)

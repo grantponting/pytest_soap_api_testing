@@ -15,11 +15,11 @@ class ListOfCurrenciesByCodeRequest(BaseRequest):
         super().__init__(url, headers, body)
         self.body = """<ListOfCurrenciesByCode xmlns="http://www.oorsprong.org/websamples.countryinfo">
             </ListOfCurrenciesByCode>"""
-        self.buildBody()
+        self.build_body()
 
-    def buildBody(self):
-        return super().buildBody(self.body)
+    def build_body(self):
+        return super().build_body(self.body)
 
-    def sendRequest(self) -> ListOfCurrenciesByCodeResponse:
+    def send_request(self) -> ListOfCurrenciesByCodeResponse:
         response = requests.post(self.url, headers=self.headers, data=self.body)
         return ListOfCurrenciesByCodeResponse(response)

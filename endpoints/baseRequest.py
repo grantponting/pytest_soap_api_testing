@@ -9,7 +9,7 @@ class BaseRequest:
         self.headers = headers
         self.body = body
 
-    def buildBody(self, xml_request):
+    def build_body(self, xml_request):
         xml_soap_wrapper = """<?xml version="1.0" encoding="utf-8"?>
         <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
         <soap:Body>
@@ -20,5 +20,5 @@ class BaseRequest:
         )
         self.body = xml_soap_wrapper
 
-    def sendRequest(self):
+    def send_request(self):
         return
