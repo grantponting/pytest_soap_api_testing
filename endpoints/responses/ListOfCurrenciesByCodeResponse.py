@@ -1,7 +1,7 @@
-from pytest_soap_api_testing.endpoints.baseResponse import baseResponse
+from pytest_soap_api_testing.endpoints.BaseResponse import BaseResponse
 
 
-class ListOfCurrenciesByCodeResponse(baseResponse):
+class ListOfCurrenciesByCodeResponse(BaseResponse):
     def __init__(self, response):
         super().__init__(response)
         self.setNamespace("ListOfCurrenciesByCodeResponse")

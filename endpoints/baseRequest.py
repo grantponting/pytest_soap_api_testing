@@ -1,4 +1,4 @@
-class baseRequest:
+class BaseRequest:
     def __init__(
         self,
         url="http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",

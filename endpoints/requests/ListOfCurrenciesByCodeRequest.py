@@ -1,11 +1,11 @@
-from pytest_soap_api_testing.endpoints.baseRequest import baseRequest
+from pytest_soap_api_testing.endpoints.BaseRequest import BaseRequest
 from pytest_soap_api_testing.endpoints.responses.ListOfCurrenciesByCodeResponse import (
     ListOfCurrenciesByCodeResponse,
 )
 import requests
 
 
-class ListOfCurrenciesByCodeRequest(baseRequest):
+class ListOfCurrenciesByCodeRequest(BaseRequest):
     def __init__(
         self,
         url="http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",

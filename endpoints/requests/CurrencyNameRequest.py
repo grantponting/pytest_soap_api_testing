@@ -1,11 +1,11 @@
-from pytest_soap_api_testing.endpoints.baseRequest import baseRequest
+from pytest_soap_api_testing.endpoints.BaseRequest import BaseRequest
 from pytest_soap_api_testing.endpoints.responses.CurrencyNameResponse import (
     CurrencyNameResponse,
 )
 import requests
 
 
-class CurrencyNameRequest(baseRequest):
+class CurrencyNameRequest(BaseRequest):
     def __init__(
         self,
         currencyCode,

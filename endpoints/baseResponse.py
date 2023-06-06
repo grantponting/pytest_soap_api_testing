@@ -3,7 +3,7 @@ import io as io
 from lxml import etree
 
 
-class baseResponse:
+class BaseResponse:
     def __init__(self, response):
         self.response = response
         try:
